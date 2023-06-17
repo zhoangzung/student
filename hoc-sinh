@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Management</h1>
+
+    <?php
+    // Define student data
+    $students = [
+        ['John Doe', 'A', 15],
+        ['Jane Smith', 'B', 16],
+        ['Mike Johnson', 'A', 17],
+        ['Emily Williams', 'C', 15],
+    ];
+    ?>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Age</th>
+        </tr>
+        <?php foreach ($students as $student) { ?>
+            <tr>
+                <td><?php echo $student[0]; ?></td>
+                <td><?php echo $student[1]; ?></td>
+                <td><?php echo $student[2]; ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+</body>
+</html>
